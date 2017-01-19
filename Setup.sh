@@ -1,6 +1,6 @@
 #This is my shell
 
-autostart_path = /etc/rc3.d
+autostart_path = "/etc/rc3.d"
 
 echo "Enter destination path: "
 read path
