@@ -9,5 +9,5 @@ camera_node_raspi: camera_node_raspi.c
 print_header.o: print_header.c
 			gcc -c print_header.c
 
-#clean:
+clean:
 		#rm -rf *o hello
