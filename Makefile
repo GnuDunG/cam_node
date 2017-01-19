@@ -1,6 +1,6 @@
 all: cam_node
 
-cam_node: camera_node_raspi.o print_header.o
+cam_node: camera_node_raspi.o 
 			gcc camera_node_raspi.o print_header.o -o cam_node
 
 camera_node_raspi: camera_node_raspi.c
