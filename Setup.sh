@@ -1,17 +1,16 @@
-#This is my shell
-
+#!/bin/bash
 
 cd /
+#clone repository
 sudo git clone https://github.com/GnuDunG/cam_node 
 cd /cam_node
+#compile
 make -f Makefile
 
+#get vlc to run as root
+sed -i 's/geteuid/getppid/' /usr/bin/vlc
+#autostart entry in rc.local shell
 sed -i '1 a /cam_node/cam_node' /etc/rc.local
-
-#sed -ie 's/exit 0//cam_node/g' /etc/rc.local 
-#sed '20 a\cam_node' 
-#'/\\/cam_node\\/cam_node/a \exit 0' /etc/rc.local
-#cp autostart_node.sh /etc/rc3.d
 
 echo "reboot in 10 seconds..."
 sleep 10
